@@ -8,7 +8,8 @@ This repository for training class REST API with Node.js by [LOXMAN](https://git
 nvm install --lts
 nvm use --lets
 ```
-3. Les't go in class for REST API with Node.js
+3. Install [Postman](https://www.postman.com) application for call test API.
+4. Les't go in class for REST API with Node.js
 
 ---
 ## Commit Policy
