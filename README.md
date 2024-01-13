@@ -11,6 +11,63 @@ nvm use --lets
 3. Install [Postman](https://www.postman.com) application for call test API.
 4. Les't go in class for REST API with Node.js
 
+## Node.js 
+### Setup Node.js
+```bash
+npm init
+```
+### Setup Babel
+1. Run this command
+```bash
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
+```
+2. Create new file '.babelrc' and add present in this file
+```json
+{
+    "presets": ["@babel/preset-env"]
+}
+```
+### Setup Express.js
+1. Install [Express.js](https://expressjs.com)
+```bash
+npm install express
+```
+2. Add new src directory
+3. Setup Express.js in this workspace
+```js
+import express from 'express';
+
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({
+        extended: true,
+    })
+);
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
+### Setup build and run
+1. Open file new package.json.
+2. Add script build and start in this file.
+```json
+"scripts": {
+    "build": "babel src --out-dir dist",
+    "Start": "node dist/main.js"
+}
+```
+### Build and Run Express.js
+```bash
+npm run build
+npm run start
+```
 ---
 ## Commit Policy
 Please commit with this [link](https://dev.to/ishanmakadia/git-commit-message-convention-that-you-can-follow-1709) and [link](http://karma-runner.github.io/1.0/dev/git-commit-msg.html) this project usage commit templates is
