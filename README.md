@@ -19,7 +19,7 @@ npm init
 ### Setup Babel
 1. Run this command
 ```bash
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
+npm install --save-dev jest @babel/core @babel/cli @babel/preset-env @babel/node @babel/plugin-transform-modules-commonjs
 ```
 2. Create new file '.babelrc' and add present in this file
 ```json
@@ -33,7 +33,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
 npm install express
 ```
 2. Add new src directory
-3. Setup Express.js in this workspace
+3. Setup Express.js in this workspace with file src/main.js
 ```js
 import express from 'express';
 
