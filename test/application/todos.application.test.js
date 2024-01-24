@@ -18,10 +18,9 @@ test('Find Todo by ID 1', async () => {
 
   // Get todo from todos application
   const todos = await todosApplication.findById(1);
-  const todo = {};
 
   // Compare todos data from todo application and hard code data
-  expect(todo).toEqual(todosMock);
+  expect(todos).toEqual(todosMock);
 });
 
 test('Find Todo by criterial check is false', async () => {
@@ -29,11 +28,10 @@ test('Find Todo by criterial check is false', async () => {
   const todosMock = data.filter((todo) => todo.check === false);
   console.log(todosMock);
   // Get todo from todos application
-  //   const todos = await todosApplication.findByCriterial({check:false});
-  const todo = {};
+  const todos = await todosApplication.findByCriterial({ check: false });
 
   // Compare todos data from todo application and hard code data
-  expect(todo).toEqual(todosMock);
+  expect(todos).toEqual(todosMock);
 });
 
 test('Find Todo by criterial create by is admin', async () => {
@@ -70,7 +68,7 @@ test('Find Todo by criterial description is description 1', async () => {
   });
 
   // Compare todos data from todo application and hard code data
-  expect(todo).toEqual(todosMock);
+  expect(todos).toEqual(todosMock);
 });
 
 test('Create Todo', async () => {
@@ -107,10 +105,9 @@ test('Update Todo id 1', async () => {
   // Get todo from todos application
   todosApplication.update(todoUpdate);
   const todos = await todosApplication.findById(todoUpdate._id);
-  const todo = {};
 
   // Compare todos data from todo application and hard code data
-  expect(todo).toEqual(todosMock);
+  expect(todos).toEqual(todosMock);
 });
 
 test('Update Todo id 3', async () => {
